@@ -46,7 +46,7 @@ namespace DynamicBundles
                     string[] dedupedFileRootRelativePaths = filePathsList.Distinct().Reverse().ToArray();
 
                     string listHashCode = StringListHelper.HashCodeForList(dedupedFileRootRelativePaths);
-                    string bundleName = "~/" + listHashCode;
+                    string bundleName = "~/bundle/" + listHashCode;
 
                     if (!bundles.Exists(bundleName))
                     {
