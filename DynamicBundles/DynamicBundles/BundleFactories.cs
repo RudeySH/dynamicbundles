@@ -35,12 +35,15 @@ namespace DynamicBundles
         /// </summary>
         public StyleBundle StyleBundleFactory(string bundleVirtualPath, string[] fileRootRelativePaths)
         {
-            return BundleWithPaths(new StyleBundle(bundleVirtualPath), fileRootRelativePaths);
+            return BundleWithPaths(new StyleBundle(bundleVirtualPath), fileRootRelativePaths, new CssRewriteUrlTransform());
         }
 
-        private T BundleWithPaths<T>(T bundle, string[] fileRootRelativePaths) where T: Bundle
+        private T BundleWithPaths<T>(T bundle, string[] fileRootRelativePaths, params IItemTransform[] transforms) where T: Bundle
         {
-            bundle.Include(fileRootRelativePaths);
+            for (var i = 0; i < fileRootRelativePaths.Length; i++)
+            {
+                bundle.Include(fileRootRelativePaths[i], transforms);
+            }
 
             if (_log != null)
             {
