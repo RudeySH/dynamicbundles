@@ -91,13 +91,13 @@ namespace DynamicBundles
         {
             if (!path.StartsWith("~"))
             {
-                return RootRelativeCombine(RootRelativePath, path);
+                return RootRelativeCombine(path);
             }
 
             return new AssetPath(path, _rootToAbsolutePathFunc);
         }
 
-        private AssetPath RootRelativeCombine(string rootRelativePath, string relativePath)
+        private AssetPath RootRelativeCombine(string relativePath)
         {
             // If relativePath contains .. (such as ..\dir), then rootRelativePathWithDots also has ..
             // This somehow leads to an endless loop.
