@@ -28,21 +28,21 @@ namespace DynamicBundles.Test.NuspecTests
         [TestMethod]
         public void OneDependencyNuspec()
         {
-            TestNuspecFileDepencyIds("onedependency.nuspec", new string[] { "~/View/Library" });
+            TestNuspecFileDepencyIds("onedependency.nuspec", new[] { "~/View/Library" });
         }
 
         [TestMethod]
         public void MultipleDependenciesNuspec()
         {
             TestNuspecFileDepencyIds("multipledependencies.nuspec",
-                                        new string[] { "~/Views/Library", "~/Packages" });
+                                        new[] { "~/Views/Library", "~/Packages" });
         }
 
         [TestMethod]
         public void NugetNuspec()
         {
             TestNuspecFileDepencyIds("nuget.nuspec",
-                                        new string[] { "Common.Logging", "WebActivatorEx" });
+                                        new[] { "Common.Logging", "WebActivatorEx" });
         }
 
         /// <summary>

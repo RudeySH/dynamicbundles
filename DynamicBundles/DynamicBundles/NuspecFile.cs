@@ -11,8 +11,8 @@ namespace DynamicBundles
 #region classes
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-        [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
+        [XmlTypeAttribute(AnonymousType = true)]
+        [XmlRootAttribute(Namespace = "", IsNullable = false)]
         public partial class package
         {
 
@@ -25,31 +25,31 @@ namespace DynamicBundles
             {
                 get
                 {
-                    return this.metadataField;
+                    return metadataField;
                 }
                 set
                 {
-                    this.metadataField = value;
+                    metadataField = value;
                 }
             }
 
             /// <remarks/>
-            [System.Xml.Serialization.XmlArrayItemAttribute("file", IsNullable = false)]
+            [XmlArrayItemAttribute("file", IsNullable = false)]
             public packageFile[] files
             {
                 get
                 {
-                    return this.filesField;
+                    return filesField;
                 }
                 set
                 {
-                    this.filesField = value;
+                    filesField = value;
                 }
             }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+        [XmlTypeAttribute(AnonymousType = true)]
         public partial class packageMetadata
         {
 
@@ -82,11 +82,11 @@ namespace DynamicBundles
             {
                 get
                 {
-                    return this.idField;
+                    return idField;
                 }
                 set
                 {
-                    this.idField = value;
+                    idField = value;
                 }
             }
 
@@ -95,11 +95,11 @@ namespace DynamicBundles
             {
                 get
                 {
-                    return this.versionField;
+                    return versionField;
                 }
                 set
                 {
-                    this.versionField = value;
+                    versionField = value;
                 }
             }
 
@@ -108,11 +108,11 @@ namespace DynamicBundles
             {
                 get
                 {
-                    return this.titleField;
+                    return titleField;
                 }
                 set
                 {
-                    this.titleField = value;
+                    titleField = value;
                 }
             }
 
@@ -121,11 +121,11 @@ namespace DynamicBundles
             {
                 get
                 {
-                    return this.authorsField;
+                    return authorsField;
                 }
                 set
                 {
-                    this.authorsField = value;
+                    authorsField = value;
                 }
             }
 
@@ -134,11 +134,11 @@ namespace DynamicBundles
             {
                 get
                 {
-                    return this.ownersField;
+                    return ownersField;
                 }
                 set
                 {
-                    this.ownersField = value;
+                    ownersField = value;
                 }
             }
 
@@ -147,11 +147,11 @@ namespace DynamicBundles
             {
                 get
                 {
-                    return this.projectUrlField;
+                    return projectUrlField;
                 }
                 set
                 {
-                    this.projectUrlField = value;
+                    projectUrlField = value;
                 }
             }
 
@@ -160,11 +160,11 @@ namespace DynamicBundles
             {
                 get
                 {
-                    return this.iconUrlField;
+                    return iconUrlField;
                 }
                 set
                 {
-                    this.iconUrlField = value;
+                    iconUrlField = value;
                 }
             }
 
@@ -173,11 +173,11 @@ namespace DynamicBundles
             {
                 get
                 {
-                    return this.requireLicenseAcceptanceField;
+                    return requireLicenseAcceptanceField;
                 }
                 set
                 {
-                    this.requireLicenseAcceptanceField = value;
+                    requireLicenseAcceptanceField = value;
                 }
             }
 
@@ -186,11 +186,11 @@ namespace DynamicBundles
             {
                 get
                 {
-                    return this.descriptionField;
+                    return descriptionField;
                 }
                 set
                 {
-                    this.descriptionField = value;
+                    descriptionField = value;
                 }
             }
 
@@ -199,11 +199,11 @@ namespace DynamicBundles
             {
                 get
                 {
-                    return this.copyrightField;
+                    return copyrightField;
                 }
                 set
                 {
-                    this.copyrightField = value;
+                    copyrightField = value;
                 }
             }
 
@@ -212,31 +212,31 @@ namespace DynamicBundles
             {
                 get
                 {
-                    return this.tagsField;
+                    return tagsField;
                 }
                 set
                 {
-                    this.tagsField = value;
+                    tagsField = value;
                 }
             }
 
             /// <remarks/>
-            [System.Xml.Serialization.XmlArrayItemAttribute("dependency", IsNullable = false)]
+            [XmlArrayItemAttribute("dependency", IsNullable = false)]
             public packageMetadataDependency[] dependencies
             {
                 get
                 {
-                    return this.dependenciesField;
+                    return dependenciesField;
                 }
                 set
                 {
-                    this.dependenciesField = value;
+                    dependenciesField = value;
                 }
             }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+        [XmlTypeAttribute(AnonymousType = true)]
         public partial class packageMetadataDependency
         {
 
@@ -245,36 +245,36 @@ namespace DynamicBundles
             private string versionField;
 
             /// <remarks/>
-            [System.Xml.Serialization.XmlAttributeAttribute()]
+            [XmlAttributeAttribute()]
             public string id
             {
                 get
                 {
-                    return this.idField;
+                    return idField;
                 }
                 set
                 {
-                    this.idField = value;
+                    idField = value;
                 }
             }
 
             /// <remarks/>
-            [System.Xml.Serialization.XmlAttributeAttribute()]
+            [XmlAttributeAttribute()]
             public string version
             {
                 get
                 {
-                    return this.versionField;
+                    return versionField;
                 }
                 set
                 {
-                    this.versionField = value;
+                    versionField = value;
                 }
             }
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+        [XmlTypeAttribute(AnonymousType = true)]
         public partial class packageFile
         {
 
@@ -283,30 +283,30 @@ namespace DynamicBundles
             private string targetField;
 
             /// <remarks/>
-            [System.Xml.Serialization.XmlAttributeAttribute()]
+            [XmlAttributeAttribute()]
             public string src
             {
                 get
                 {
-                    return this.srcField;
+                    return srcField;
                 }
                 set
                 {
-                    this.srcField = value;
+                    srcField = value;
                 }
             }
 
             /// <remarks/>
-            [System.Xml.Serialization.XmlAttributeAttribute()]
+            [XmlAttributeAttribute()]
             public string target
             {
                 get
                 {
-                    return this.targetField;
+                    return targetField;
                 }
                 set
                 {
-                    this.targetField = value;
+                    targetField = value;
                 }
             }
         }

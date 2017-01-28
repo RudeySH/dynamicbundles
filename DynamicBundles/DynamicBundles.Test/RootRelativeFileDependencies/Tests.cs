@@ -17,10 +17,10 @@ namespace DynamicBundles.Test.RootRelativeFileDependencies
 
             string[][] expectedScriptFiles =
             {
-                new string[] {
+                new[] {
                     "~/Views/Shared/_LayoutContainer/jquery-1.8.2.js"
                 },
-                new string[] {
+                new[] {
                     "~/Views/Account/AccountDetailsAssets/AccountDetailsAssets.js"
                 }
             };
@@ -31,7 +31,7 @@ namespace DynamicBundles.Test.RootRelativeFileDependencies
                     "~/Views/Shared/_LayoutContainer/Site.css",
                     "~/Views/Shared/_Layout/_Layout.css"
                 },
-                new string[] {
+                new[] {
                     "~/Views/Account/AccountDetailsAssets/AccountDetailsAssets.css"
                 }
             };

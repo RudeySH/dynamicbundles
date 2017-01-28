@@ -10,12 +10,12 @@ namespace DynamicBundles
     /// </summary>
     public static class HttpContextStore
     {
-        private static readonly string AssetDirectoryItemKey = "__DynamicBundles_AssetDirectory";
-        private static readonly string FirstTimeItemKey = "__DynamicBundles_FirstTime";
-        private static readonly string TopBundleNamesItemKey = "__DynamicBundles_TopBundleNames";
-        private static readonly string BottomBundleNamesItemKey = "__DynamicBundles_BottomBundleNames";
+	    private const string AssetDirectoryItemKey = "__DynamicBundles_AssetDirectory";
+	    private const string FirstTimeItemKey = "__DynamicBundles_FirstTime";
+	    private const string TopBundleNamesItemKey = "__DynamicBundles_TopBundleNames";
+	    private const string BottomBundleNamesItemKey = "__DynamicBundles_BottomBundleNames";
 
-        /// <summary>
+	    /// <summary>
         /// Adds a directory with assets (script files, etc.) to the stored list of asset directories.
         /// </summary>
         /// <param name="dirPath"></param>

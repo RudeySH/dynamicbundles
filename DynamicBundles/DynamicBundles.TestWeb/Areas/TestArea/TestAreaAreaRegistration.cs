@@ -18,7 +18,7 @@ namespace DynamicBundles.TestWeb.Areas.TestArea
                 "TestArea_default",
                 "TestArea/{controller}/{action}/{id}",
                 new { action = "Index", id = UrlParameter.Optional },
-                new string[] { "DynamicBundles.TestWeb.Areas.TestArea.Controllers" }
+                new[] { "DynamicBundles.TestWeb.Areas.TestArea.Controllers" }
             );
         }
     }

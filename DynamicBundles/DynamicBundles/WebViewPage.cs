@@ -12,7 +12,7 @@ namespace DynamicBundles
     {
         protected override void InitializePage()
         {
-            WebViewPageStatic.InitializePage(this.VirtualPath);
+            WebViewPageStatic.InitializePage(VirtualPath);
             base.InitializePage();
         }
 
@@ -37,7 +37,7 @@ namespace DynamicBundles
     {
         protected override void InitializePage()
         {
-            WebViewPageStatic.InitializePage(this.VirtualPath);
+            WebViewPageStatic.InitializePage(VirtualPath);
             base.InitializePage();
         }
 
