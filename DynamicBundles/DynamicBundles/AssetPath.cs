@@ -12,7 +12,7 @@ namespace DynamicBundles
     /// </summary>
     public class AssetPath
     {
-        public string RootRelativePath { get; private set; }
+        public string RootRelativePath { get; }
 
         private readonly Func<string, string> _rootToAbsolutePathFunc;
 
