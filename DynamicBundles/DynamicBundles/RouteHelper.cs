@@ -79,7 +79,7 @@ namespace DynamicBundles
         /// If the file path doesn't adhere to this, the method returns
         /// @
         /// </summary>
-        /// <param name="filePath"></param>
+        /// <param name="assetPath"></param>
         /// <returns></returns>
         public static string FilePathSortKey(AssetPath assetPath)
         {

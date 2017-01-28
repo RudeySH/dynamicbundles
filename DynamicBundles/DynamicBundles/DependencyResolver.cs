@@ -140,7 +140,7 @@ namespace DynamicBundles
         /// Takes a file path, and returns the asset type of that file.
         /// If there is no known asset type for the file, returns null.
         /// </summary>
-        /// <param name="extension"></param>
+        /// <param name="filePath"></param>
         /// <returns></returns>
         private AssetType? AssetTypeOfFile(string filePath)
         {

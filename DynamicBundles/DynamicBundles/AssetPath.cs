@@ -73,7 +73,7 @@ namespace DynamicBundles
         /// The file or directory must sit in the same project as the file or directory represented by this AssetPath object.
         /// Returns a new AssetPath representing the file or directory.
         /// </summary>
-        /// <param name="absolutePaths"></param>
+        /// <param name="absolutePath"></param>
         /// <returns></returns>
         /// <remarks></remarks>
         public AssetPath AbsolutePathToAssetPath(string absolutePath)
