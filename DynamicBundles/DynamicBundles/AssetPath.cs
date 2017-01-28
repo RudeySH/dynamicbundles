@@ -14,7 +14,7 @@ namespace DynamicBundles
     {
         public string RootRelativePath { get; private set; }
 
-        private readonly Func<string, string> _rootToAbsolutePathFunc = null;
+        private readonly Func<string, string> _rootToAbsolutePathFunc;
 
         /// <summary>
         /// Constructor.
@@ -32,7 +32,7 @@ namespace DynamicBundles
             _rootToAbsolutePathFunc = rootToAbsolutePathFunc;
         }
 
-        private string _absolutePath = null;
+        private string _absolutePath;
         public string AbsolutePath
         {
             get
@@ -51,7 +51,7 @@ namespace DynamicBundles
         /// "d:\dev\Views\Home". In that case, the "absolute prefix" (the stuff that replaces the ~) is "d:\dev",
         /// which is 6 chars long.        ///
         /// </summary>
-        private int? _absolutePathPrefixLength = null;
+        private int? _absolutePathPrefixLength;
         private int AbsolutePathPrefixLength
         {
             get

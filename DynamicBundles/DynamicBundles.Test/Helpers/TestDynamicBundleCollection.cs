@@ -10,7 +10,7 @@ namespace DynamicBundles.Test
     /// </summary>
     internal class TestDynamicBundleCollection : IDynamicBundleCollection
     {
-        private readonly Dictionary<string, Bundle> _bundles = null;
+        private readonly Dictionary<string, Bundle> _bundles;
 
         public TestDynamicBundleCollection(Dictionary<string, Bundle> bundles)
         {
