@@ -144,6 +144,11 @@ namespace DynamicBundles
         /// <returns></returns>
         private AssetType? AssetTypeOfFile(string filePath)
         {
+            if (filePath == null)
+            {
+                return null;
+            }
+
             string extension = Path.GetExtension(filePath).ToLower();
 
             switch (extension)

@@ -128,7 +128,7 @@ namespace DynamicBundles
             List<AssetPath> parentDirs = new List<AssetPath>();
             string currentRootRelativePath = RootRelativePath;
 
-            while (!currentRootRelativePath.EndsWith(stopDirectory))
+            while (currentRootRelativePath != null && !currentRootRelativePath.EndsWith(stopDirectory))
             {
                 parentDirs.Add(new AssetPath(currentRootRelativePath, _rootToAbsolutePathFunc));
                 currentRootRelativePath = Path.GetDirectoryName(currentRootRelativePath);
