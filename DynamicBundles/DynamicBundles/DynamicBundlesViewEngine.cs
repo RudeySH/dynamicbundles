@@ -4,7 +4,7 @@ namespace DynamicBundles
 {
     public class DynamicBundlesViewEngine : RazorViewEngine
     {
-        public DynamicBundlesViewEngine(): base()
+        public DynamicBundlesViewEngine()
         {
             // Finds views sitting in own directories, such as ~/Views/Home/Index/Index.cshtml.
             // Note that this only works if you specify only the name of the view ("Index"), because only then
