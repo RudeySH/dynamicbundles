@@ -12,7 +12,7 @@ namespace DynamicBundles
             // (such as: "~/Views/Shared/_Layout/_Layout.cshtml")
             //
             // See book "Pro ASP.NET MVC 4, page 495
-            ViewLocationFormats = new string[]
+            ViewLocationFormats = new[]
             {
                 "~/Views/{1}/{0}/{0}.cshtml",
                 "~/Views/{1}/{0}/{0}.vbhtml",
@@ -23,7 +23,7 @@ namespace DynamicBundles
             MasterLocationFormats = ViewLocationFormats;
             PartialViewLocationFormats = ViewLocationFormats;
 
-            AreaViewLocationFormats = new string[]
+            AreaViewLocationFormats = new[]
             {
                 "~/Areas/{2}/Views/{1}/{0}/{0}.cshtml",
                 "~/Areas/{2}/Views/{1}/{0}/{0}.vbhtml",
