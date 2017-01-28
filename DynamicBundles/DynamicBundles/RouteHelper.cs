@@ -38,7 +38,7 @@ namespace DynamicBundles
             }
 
             var sortedListOfLists = filePathsBySortKey.GetListOfLists();
-            sortedListOfLists.Sort((firstPair, nextPair) => firstPair.Key.CompareTo(nextPair.Key));
+            sortedListOfLists.Sort((firstPair, nextPair) => String.Compare(firstPair.Key, nextPair.Key, StringComparison.Ordinal));
 
             List<List<AssetPath>> result = sortedListOfLists.Select(p => p.Value).ToList();
             return result;
