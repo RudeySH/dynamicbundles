@@ -332,7 +332,7 @@ namespace DynamicBundles
         public static bool IsNuspecFile(string absolutePath)
         {
             string extension = Path.GetExtension(absolutePath);
-            return (String.CompareOrdinal(extension, ".nuspec") == 0);
+            return (string.CompareOrdinal(extension, ".nuspec") == 0);
         }
 
         /// <summary>
