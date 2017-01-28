@@ -1,10 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using DynamicBundles.Models;
-using DynamicBundles;
-using System.Collections.Generic;
-using System.Web.Optimization;
-using System.Linq;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DynamicBundles.Test.MultipleFileDependencies
 {

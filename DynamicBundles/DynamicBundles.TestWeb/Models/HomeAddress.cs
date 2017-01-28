@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace DynamicBundles.TestWeb
+﻿namespace DynamicBundles.TestWeb
 {
     public class HomeAddress
     {
