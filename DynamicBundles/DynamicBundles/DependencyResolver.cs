@@ -55,9 +55,9 @@ namespace DynamicBundles
             // Note: parentDirs will contain dirPath itself.
             //
             // dirPath.ParentDirs will give you something like
-            /// ~/Views/Shared/EditorTemplates/HomeAddress
-            /// ~/Views/Shared/EditorTemplates
-            /// ~/Views/Shared
+            // ~/Views/Shared/EditorTemplates/HomeAddress
+            // ~/Views/Shared/EditorTemplates
+            // ~/Views/Shared
             // However, the longer directory tends to have the more specific files. If there is a dependency between files in these
             // directories, it would be from more specific to less specific, not the other way around. So process the directories in
             // reverse order, so CSS and JS files in more common directories are loaded first.
