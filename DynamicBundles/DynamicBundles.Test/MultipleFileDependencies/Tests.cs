@@ -14,14 +14,14 @@ namespace DynamicBundles.Test.MultipleFileDependencies
         [TestMethod]
         public void MultipleFileDependencies()
         {
-            string[] assetDirs = 
+            string[] assetDirs =
             new [] {
                 "~/Views/Account/Details",
                 "~/Views/Shared/_Layout",
                 "~/Views/Shared/_LayoutContainer"
             };
 
-            string[][] expectedScriptFiles = 
+            string[][] expectedScriptFiles =
             {
                 new string[] {
                     "~/Views/Shared/_LayoutContainer/jquery-1.8.2.js"
@@ -31,7 +31,7 @@ namespace DynamicBundles.Test.MultipleFileDependencies
                 }
             };
 
-            string[][] expectedStyleFiles = 
+            string[][] expectedStyleFiles =
             {
                 new [] {
                     "~/Views/Shared/_LayoutContainer/Site.css",
@@ -45,9 +45,9 @@ namespace DynamicBundles.Test.MultipleFileDependencies
                 }
             };
 
-            Tester.Test("MultipleFileDependencies", 
-                        assetDirs, 
-                        expectedScriptFiles, 
+            Tester.Test("MultipleFileDependencies",
+                        assetDirs,
+                        expectedScriptFiles,
                         expectedStyleFiles);
         }
     }

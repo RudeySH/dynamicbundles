@@ -24,16 +24,16 @@ namespace DynamicBundles
         }
 
         /// <summary>
-        /// Takes the path to a directory and returns the files in that directory, the files in the parent directories (down to the Views or ~ dir), 
+        /// Takes the path to a directory and returns the files in that directory, the files in the parent directories (down to the Views or ~ dir),
         /// and all the files
         /// that that directory depends on (via .nuspec files).
-        /// 
+        ///
         /// It does not go into sub directories.
-        /// 
+        ///
         /// Uses caching to reduce trips to the file system.
         /// </summary>
         /// <param name="dirPath">
-        /// Path to the directory. 
+        /// Path to the directory.
         /// </param>
         /// <returns>
         /// The required files, split by asset type.
@@ -49,7 +49,7 @@ namespace DynamicBundles
         /// Same as GetRequiredFilesForDirectory, but uncached.
         /// </summary>
         /// <param name="dirPath">
-        /// Path to the directory. 
+        /// Path to the directory.
         /// </param>
         /// <returns></returns>
         private FileListsByAssetType GetRequiredFilesForDirectoryUnchached(AssetPath dirPath)
@@ -62,7 +62,7 @@ namespace DynamicBundles
             /// ~/Views/Shared/EditorTemplates/HomeAddress
             /// ~/Views/Shared/EditorTemplates
             /// ~/Views/Shared
-            // However, the longer directory tends to have the more specific files. If there is a dependency between files in these 
+            // However, the longer directory tends to have the more specific files. If there is a dependency between files in these
             // directories, it would be from more specific to less specific, not the other way around. So process the directories in
             // reverse order, so CSS and JS files in more common directories are loaded first.
 
@@ -97,7 +97,7 @@ namespace DynamicBundles
                         {
                             fileListsByAssetType.Append(GetDependencies(filePath, dirPath));
                         }
-                    } 
+                    }
                     else
                     {
                         AssetType? assetType = AssetTypeOfFile(filePath);
@@ -114,7 +114,7 @@ namespace DynamicBundles
         /// Reads the dependencies in a Nuspec file. These are directories.
         /// Accumulates the assets in those directories to in a FileListsByAssetType.
         /// This is then returned.
-        /// 
+        ///
         /// This method calls the dependency resolver concurrently.
         /// </summary>
         /// <param name="absoluteNuspecPath">

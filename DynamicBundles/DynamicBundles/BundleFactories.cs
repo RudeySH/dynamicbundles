@@ -45,7 +45,7 @@ namespace DynamicBundles
         private T BundleWithPaths<T>(T bundle, string[] fileRootRelativePaths) where T: Bundle
         {
             bundle.Include(fileRootRelativePaths);
-            
+
             if (_log != null)
             {
                 _log[bundle.Path] = fileRootRelativePaths;

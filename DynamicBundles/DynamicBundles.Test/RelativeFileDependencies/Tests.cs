@@ -14,14 +14,14 @@ namespace DynamicBundles.Test.RelativeFileDependencies
         [TestMethod]
         public void RelativeFileDependencies()
         {
-            string[] assetDirs = 
+            string[] assetDirs =
             new [] {
                 "~/Views/Account/Details",
                 "~/Views/Shared/_Layout",
                 "~/Views/Shared/_LayoutContainer"
             };
 
-            string[][] expectedScriptFiles = 
+            string[][] expectedScriptFiles =
             {
                 new string[] {
                     "~/Views/Shared/_LayoutContainer/jquery-1.8.2.js"
@@ -31,7 +31,7 @@ namespace DynamicBundles.Test.RelativeFileDependencies
                 }
             };
 
-            string[][] expectedStyleFiles = 
+            string[][] expectedStyleFiles =
             {
                 new [] {
                     "~/Views/Shared/_LayoutContainer/Site.css",
@@ -42,9 +42,9 @@ namespace DynamicBundles.Test.RelativeFileDependencies
                 }
             };
 
-            Tester.Test("RelativeFileDependencies", 
-                        assetDirs, 
-                        expectedScriptFiles, 
+            Tester.Test("RelativeFileDependencies",
+                        assetDirs,
+                        expectedScriptFiles,
                         expectedStyleFiles);
         }
     }

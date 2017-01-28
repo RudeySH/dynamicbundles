@@ -11,7 +11,7 @@ namespace DynamicBundles
     /// <summary>
     /// Represents a path to a file or directory.
     /// That file or directory must live within the current project.
-    /// 
+    ///
     /// This is called "AssetPath" rather than "Path" to not clash with the .Net Path class.
     /// </summary>
     public class AssetPath
@@ -88,7 +88,7 @@ namespace DynamicBundles
 
         /// <summary>
         /// Create a new AssetPath with the same rootToAbsolutePathFunc as this AssetPath.
-        /// 
+        ///
         /// If the given path is not root relative, it is assumed to be relative to this AssetPath.
         /// </summary>
         public AssetPath Create(string path)
@@ -115,12 +115,12 @@ namespace DynamicBundles
         /// <summary>
         /// Returns a list with parent dirs of this file or directory, and the file or directory itself.
         /// If stopDirectory is given, it will stop when it hits that directory. Otherwise, it stops at ~
-        /// 
+        ///
         /// For example, suppose this object represents
         /// ~/Views/Shared/EditorTemplates/HomeAddress
-        /// and the stopDirectory is 
+        /// and the stopDirectory is
         /// Views
-        /// 
+        ///
         /// Then this method returns
         /// ~/Views/Shared/EditorTemplates/HomeAddress
         /// ~/Views/Shared/EditorTemplates

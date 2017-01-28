@@ -66,7 +66,7 @@ namespace DynamicBundles
     internal static class WebViewPageStatic
     {
        private static DynamicBundlesBuilder _dynamicBundlesBuilder =
-           new DynamicBundlesBuilder(new DynamicBundleCollection(BundleTable.Bundles), 
+           new DynamicBundlesBuilder(new DynamicBundleCollection(BundleTable.Bundles),
                                     new CacheHelper(),
                                     new BundleFactories());
 
@@ -92,12 +92,12 @@ namespace DynamicBundles
 
         /// <summary>
         /// Call this method from the top level _Layout view, in the head section.
-        /// It replaces the normal 
+        /// It replaces the normal
         /// @Styles.Render("....") and
         /// @Scripts.Render("....")
         /// lines that sit near the top of the page.
-        /// 
-        /// It renders all the bundles that the page needs (these can be different per page) and need to go 
+        ///
+        /// It renders all the bundles that the page needs (these can be different per page) and need to go
         /// near the top (mainly style bundles).
         /// </summary>
         /// <returns></returns>

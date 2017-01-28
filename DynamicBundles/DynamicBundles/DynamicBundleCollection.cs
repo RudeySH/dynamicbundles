@@ -15,7 +15,7 @@ namespace DynamicBundles
 
     /// <summary>
     /// Encapsulates the MVC BundleCollection. The difference is that this class
-    /// implements IBundleCollection, so it can be replaced by a mock 
+    /// implements IBundleCollection, so it can be replaced by a mock
     /// during unit testing.
     /// </summary>
     internal class DynamicBundleCollection : IDynamicBundleCollection

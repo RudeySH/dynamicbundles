@@ -22,7 +22,7 @@ namespace DynamicBundles.Test.NuspecTests
         {
             Assert.IsFalse(NuspecFile.IsNuspecFile("~/Views/blah.xml"));
         }
-        
+
         [TestMethod]
         public void EmptyNuspec()
         {
@@ -38,7 +38,7 @@ namespace DynamicBundles.Test.NuspecTests
         [TestMethod]
         public void MultipleDependenciesNuspec()
         {
-            TestNuspecFileDepencyIds("multipledependencies.nuspec", 
+            TestNuspecFileDepencyIds("multipledependencies.nuspec",
                                         new string[] { "~/Views/Library", "~/Packages" });
         }
 

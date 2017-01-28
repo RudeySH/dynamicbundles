@@ -16,7 +16,7 @@ namespace DynamicBundles
 
         /// <param name="bundles">
         /// The bundle collection that the bundles will be added to.
-        /// 
+        ///
         /// Outside tests, this would always be BundleTable.Bundles
         /// </param>
         /// <param name="cacheHelper">
@@ -35,7 +35,7 @@ namespace DynamicBundles
         /// <param name="assetDirectoryList">
         /// The directories with assets that need to be included. These directories may have dependencies
         /// on other directories, such as via .nuspec dependencies files and parent directories.
-        /// 
+        ///
         /// When a view is processed, its directory is normally added to this list.
         /// </param>
         /// <param name="scriptBundleVirtualPaths">
@@ -44,7 +44,7 @@ namespace DynamicBundles
         /// <param name="styleBundleVirtualPaths">
         /// The virtual paths of the generated style bundles.
         /// </param>
-        public void Builder(List<AssetPath> assetDirectoryList, 
+        public void Builder(List<AssetPath> assetDirectoryList,
                             out List<string> scriptBundleVirtualPaths,
                             out List<string> styleBundleVirtualPaths)
         {

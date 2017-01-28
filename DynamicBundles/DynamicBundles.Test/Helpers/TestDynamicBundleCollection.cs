@@ -10,13 +10,13 @@ namespace DynamicBundles.Test
 {
     /// <summary>
     /// Encapsulates the MVC BundleCollection. The difference is that this class
-    /// implements IBundleCollection, so it can be replaced by a mock 
+    /// implements IBundleCollection, so it can be replaced by a mock
     /// during unit testing.
     /// </summary>
     internal class TestDynamicBundleCollection : IDynamicBundleCollection
     {
         private Dictionary<string, Bundle> _bundles = null;
-        
+
         public TestDynamicBundleCollection(Dictionary<string, Bundle> bundles)
         {
             _bundles = bundles;

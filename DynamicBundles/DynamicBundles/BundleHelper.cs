@@ -13,7 +13,7 @@ namespace DynamicBundles
         /// <summary>
         /// Takes a list of lists of file paths. Each file path is root relative (starts with ~).
         /// Turns these lists of paths into bundles. Ensures each file path is added only once.
-        /// 
+        ///
         /// Adds the bundles to the given bundle collection, but only if there is no bundle yet with the same files,
         /// regardless of the order of the files or casing. That is, (a.css, b.css) is regarded as the same as (B.css, a.css).
         /// Returns a list with the bundle paths, in the same order as the originating lists
@@ -41,7 +41,7 @@ namespace DynamicBundles
                     IEnumerable<string> filePathsList = fileList.Select(f => f.RootRelativePath);
 
                     // Reverse the order of the files. Files that have been added later tend to be more generic
-                    // (such as files in _Layout are added before those in _LayoutContainer). This way, files that depend on the 
+                    // (such as files in _Layout are added before those in _LayoutContainer). This way, files that depend on the
                     // more generic files are loaded later.
                     string[] dedupedFileRootRelativePaths = filePathsList.Distinct().Reverse().ToArray();
 

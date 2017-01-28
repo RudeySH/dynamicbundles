@@ -36,16 +36,16 @@ namespace DynamicBundles.TestWeb.Controllers
         [ChildActionOnly]
         public ActionResult MyPerson()
         {
-            Person s = new Person { 
-                FirstName = "Joe", 
-                LastName = "Smith", 
-                HomeAddress = new HomeAddress { 
+            Person s = new Person {
+                FirstName = "Joe",
+                LastName = "Smith",
+                HomeAddress = new HomeAddress {
                     Street = "Country Lane",
                     HouseNumber = 45,
                     City = "Rochester"
-                } 
+                }
             };
-            
+
             return PartialView(s);
         }
 

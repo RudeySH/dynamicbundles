@@ -21,7 +21,7 @@ namespace DynamicBundles
         public static string HashCodeForList(IEnumerable<string> list)
         {
            List<int> codes = new List<int>();
-           foreach (string item in list) 
+           foreach (string item in list)
            {
               codes.Add(item.ToLower().GetHashCode());
            }
@@ -29,7 +29,7 @@ namespace DynamicBundles
            codes.Sort();
            long hash = 0;
 
-           foreach (int code in codes) 
+           foreach (int code in codes)
            {
               unchecked {
                  hash *= 251; // multiply by a prime number

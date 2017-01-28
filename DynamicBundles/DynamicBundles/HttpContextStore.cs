@@ -68,7 +68,7 @@ namespace DynamicBundles
         }
 
         /// <summary>
-        /// Stores the list with names of bundles that need to be rendered 
+        /// Stores the list with names of bundles that need to be rendered
         /// near the top of the _Layout file.
         /// </summary>
         public static void StoreTopBundleNames(List<string> bundleNames)
@@ -77,7 +77,7 @@ namespace DynamicBundles
         }
 
         /// <summary>
-        /// Gets the list with names of bundles that need to be rendered 
+        /// Gets the list with names of bundles that need to be rendered
         /// near the top of the _Layout file.
         /// </summary>
         public static List<string> GetTopBundleNames()
@@ -93,7 +93,7 @@ namespace DynamicBundles
         }
 
         /// <summary>
-        /// Stores the list with names of bundles that need to be rendered 
+        /// Stores the list with names of bundles that need to be rendered
         /// near the bottom of the _Layout file.
         /// </summary>
         public static void StoreBottomBundleNames(List<string> bundleNames)
@@ -102,7 +102,7 @@ namespace DynamicBundles
         }
 
         /// <summary>
-        /// Gets the list with names of bundles that need to be rendered 
+        /// Gets the list with names of bundles that need to be rendered
         /// near the bottom of the _Layout file.
         /// </summary>
         public static List<string> GetBottomBundleNames()

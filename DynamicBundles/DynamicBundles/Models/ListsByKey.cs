@@ -26,7 +26,7 @@ namespace DynamicBundles.Models
         /// Appends another ListsByKey to this ListsByKey.
         /// This means that the lists of T of the other ListsByKey are appended
         /// to the lists in this ListsByKey, by key.
-        /// 
+        ///
         /// The order of the items in listsByKey is preserved.
         /// </summary>
         /// <param name="fileListsByAssetType"></param>

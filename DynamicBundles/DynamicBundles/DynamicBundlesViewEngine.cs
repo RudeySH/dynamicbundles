@@ -19,10 +19,10 @@ namespace DynamicBundles
             // See book "Pro ASP.NET MVC 4, page 495
             ViewLocationFormats = new string[]
             {
-                "~/Views/{1}/{0}/{0}.cshtml", 
-                "~/Views/{1}/{0}/{0}.vbhtml", 
-                "~/Views/Shared/{0}/{0}.cshtml", 
-                "~/Views/Shared/{0}/{0}.vbhtml" 
+                "~/Views/{1}/{0}/{0}.cshtml",
+                "~/Views/{1}/{0}/{0}.vbhtml",
+                "~/Views/Shared/{0}/{0}.cshtml",
+                "~/Views/Shared/{0}/{0}.vbhtml"
             };
 
             MasterLocationFormats = ViewLocationFormats;
@@ -30,10 +30,10 @@ namespace DynamicBundles
 
             AreaViewLocationFormats = new string[]
             {
-                "~/Areas/{2}/Views/{1}/{0}/{0}.cshtml", 
-                "~/Areas/{2}/Views/{1}/{0}/{0}.vbhtml", 
-                "~/Areas/{2}/Views/Shared/{0}/{0}.cshtml", 
-                "~/Areas/{2}/Views/Shared/{0}/{0}.vbhtml" 
+                "~/Areas/{2}/Views/{1}/{0}/{0}.cshtml",
+                "~/Areas/{2}/Views/{1}/{0}/{0}.vbhtml",
+                "~/Areas/{2}/Views/Shared/{0}/{0}.cshtml",
+                "~/Areas/{2}/Views/Shared/{0}/{0}.vbhtml"
             };
 
             AreaMasterLocationFormats = AreaViewLocationFormats;

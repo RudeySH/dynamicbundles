@@ -14,14 +14,14 @@ namespace DynamicBundles.Test
         [TestMethod]
         public void CheckBundle()
         {
-            string[] assetDirs = 
+            string[] assetDirs =
             new [] {
                 "~/Views/Account",
                 "~/Views/Shared/_Layout",
                 "~/Views/Shared/_LayoutContainer"
             };
 
-            string[][] expectedScriptFiles = 
+            string[][] expectedScriptFiles =
             {
                 new [] {
                     "~/Views/Shared/_LayoutContainer/SharedCode.js",
@@ -29,7 +29,7 @@ namespace DynamicBundles.Test
                 }
             };
 
-            string[][] expectedStyleFiles = 
+            string[][] expectedStyleFiles =
             {
                 new [] {
                     "~/Views/Shared/_LayoutContainer/Site.css",
@@ -38,9 +38,9 @@ namespace DynamicBundles.Test
                 }
             };
 
-            Tester.Test("AssetsInLayoutOnly", 
-                        assetDirs, 
-                        expectedScriptFiles, 
+            Tester.Test("AssetsInLayoutOnly",
+                        assetDirs,
+                        expectedScriptFiles,
                         expectedStyleFiles);
         }
     }

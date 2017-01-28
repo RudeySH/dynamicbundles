@@ -18,7 +18,7 @@ namespace DynamicBundles
         private static object lockThis = new Object();
 
         /// <summary>
-        /// Gets an item from cache. 
+        /// Gets an item from cache.
         /// If the item is not in cache, creates it and stores it, with a dependency on a collection of directories -
         /// so if a file is added/deleted or changed, the cache item is removed from cache.
         /// </summary>

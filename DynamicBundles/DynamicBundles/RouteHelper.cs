@@ -15,14 +15,14 @@ namespace DynamicBundles
         /// Takes a list of paths and puts them in separate lists, by area and controller.
         /// So all files in Area "Admin" and Controller "Home" go into one list, whilst
         /// all files without Area and Controller "About" go into another list.
-        /// 
-        /// Within the lists, the original order of the files is preserved. So if 
-        /// the input list contains two files in Area "Admin" and Controller "Home", they are 
+        ///
+        /// Within the lists, the original order of the files is preserved. So if
+        /// the input list contains two files in Area "Admin" and Controller "Home", they are
         /// added to the result list in the same order as in the input list.
-        /// 
+        ///
         /// The list of lists is sorted as follows, to ensure that the caller can
         /// place library files (such as jQuery) ahead of other files in the bundles:
-        /// 
+        ///
         /// * files with no Area, with controller Shared, and that live in a directory with a name starting with _Layout
         /// * files with no Area, with controller Shared
         /// * files with an Area, with controller Shared, and that live in a directory with a name starting with _Layout
@@ -49,37 +49,37 @@ namespace DynamicBundles
 
         /// <summary>
         /// Takes a file path and returns a string formatted like this:
-        /// 
+        ///
         /// * files with no Area, with controller Shared, and that live in a directory with a name starting with _Layout:
         ///   @___@
-        ///   
+        ///
         /// * files with no Area, with controller Shared, but don't live in a directory with a name starting with _Layout:
         ///   @___@@
-        ///   
+        ///
         /// * files with an Area, with controller Shared, and that live in a directory with a name starting with _Layout:
         ///   [Area]___@
-        ///   
+        ///
         /// * files with an Area, with controller Shared, but don't live in a directory with a name starting with _Layout:
         ///   [Area]___@@
-        ///   
+        ///
         /// * all other files, with no area
         ///   @___[Controller]
-        ///   
+        ///
         /// * all other files, with an area
         ///   [Area]___[Controller]
-        /// 
+        ///
         /// Note that alphabetically, @ sorts before any letter or digit.
         /// Also, @___@@ sorts after @___@.
-        /// 
+        ///
         /// The method assumes that the file path is root relative, and follows MVC conventions:
-        /// 
+        ///
         /// * path with an Area:
         ///   ~/Areas/TestArea/Views/home/index/indexspecific.css
-        /// 
+        ///
         /// * path without an Area:
         ///   ~/Views/home/index/indexspecific.css
-        /// 
-        /// If the file path doesn't adhere to this, the method returns 
+        ///
+        /// If the file path doesn't adhere to this, the method returns
         /// @
         /// </summary>
         /// <param name="filePath"></param>

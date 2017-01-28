@@ -14,14 +14,14 @@ namespace DynamicBundles.Test.DependenciesInController
         [TestMethod]
         public void DependenciesInController()
         {
-            string[] assetDirs = 
+            string[] assetDirs =
             new [] {
                 "~/Views/Account/Details",
                 "~/Views/Shared/_Layout",
                 "~/Views/Shared/_LayoutContainer"
             };
 
-            string[][] expectedScriptFiles = 
+            string[][] expectedScriptFiles =
             {
                 new string[] {
                     "~/Views/Shared/_LayoutContainer/jquery-1.8.2.js"
@@ -31,7 +31,7 @@ namespace DynamicBundles.Test.DependenciesInController
                 }
             };
 
-            string[][] expectedStyleFiles = 
+            string[][] expectedStyleFiles =
             {
                 new [] {
                     "~/Views/Shared/_LayoutContainer/Site.css",
@@ -42,9 +42,9 @@ namespace DynamicBundles.Test.DependenciesInController
                 }
             };
 
-            Tester.Test("DependenciesInController", 
-                        assetDirs, 
-                        expectedScriptFiles, 
+            Tester.Test("DependenciesInController",
+                        assetDirs,
+                        expectedScriptFiles,
                         expectedStyleFiles);
         }
     }
