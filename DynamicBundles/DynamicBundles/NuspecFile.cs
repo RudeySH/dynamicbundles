@@ -312,7 +312,7 @@ namespace DynamicBundles
         }
 #endregion
 
-        private package _package;
+        private readonly package _package;
 
         /// <summary>
         /// Constructor.

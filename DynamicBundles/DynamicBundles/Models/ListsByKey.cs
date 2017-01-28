@@ -8,7 +8,7 @@ namespace DynamicBundles.Models
     /// </summary>
     public class ListsByKey<T,K>
     {
-        Dictionary<K, List<T>> store = new Dictionary<K, List<T>>();
+	    readonly Dictionary<K, List<T>> store = new Dictionary<K, List<T>>();
 
         private Dictionary<K, List<T>> Store
         {

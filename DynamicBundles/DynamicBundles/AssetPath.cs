@@ -14,7 +14,7 @@ namespace DynamicBundles
     {
         public string RootRelativePath { get; private set; }
 
-        private Func<string, string> _rootToAbsolutePathFunc = null;
+        private readonly Func<string, string> _rootToAbsolutePathFunc = null;
 
         /// <summary>
         /// Constructor.

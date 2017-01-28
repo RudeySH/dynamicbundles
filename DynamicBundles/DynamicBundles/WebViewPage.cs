@@ -60,7 +60,7 @@ namespace DynamicBundles
 
     internal static class WebViewPageStatic
     {
-       private static DynamicBundlesBuilder _dynamicBundlesBuilder =
+       private static readonly DynamicBundlesBuilder _dynamicBundlesBuilder =
            new DynamicBundlesBuilder(new DynamicBundleCollection(BundleTable.Bundles),
                                     new CacheHelper(),
                                     new BundleFactories());

@@ -4,7 +4,7 @@ namespace DynamicBundles.Test
 {
     public class TestPathHelper
     {
-        private string _testDirectory;
+        private readonly string _testDirectory;
 
         public TestPathHelper(string testDirectory)
         {

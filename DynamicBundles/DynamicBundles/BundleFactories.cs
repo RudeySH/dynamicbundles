@@ -5,7 +5,7 @@ namespace DynamicBundles
 {
     public class BundleFactories
     {
-        private Dictionary<string, string[]> _log = null;
+        private readonly Dictionary<string, string[]> _log = null;
 
         public BundleFactories()
         {

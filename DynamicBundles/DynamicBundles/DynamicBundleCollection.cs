@@ -15,7 +15,7 @@ namespace DynamicBundles
     /// </summary>
     internal class DynamicBundleCollection : IDynamicBundleCollection
     {
-        private BundleCollection _bundles = null;
+        private readonly BundleCollection _bundles = null;
 
         public DynamicBundleCollection(BundleCollection bundles)
         {

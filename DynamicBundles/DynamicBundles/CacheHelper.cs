@@ -13,7 +13,7 @@ namespace DynamicBundles
 
     public class CacheHelper : ICacheHelper
     {
-        private static object lockThis = new Object();
+        private static readonly object lockThis = new Object();
 
         /// <summary>
         /// Gets an item from cache.
