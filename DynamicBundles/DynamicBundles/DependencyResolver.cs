@@ -12,7 +12,7 @@ namespace DynamicBundles
 
     public class DependencyResolver : IDependencyResolver
     {
-	    readonly ICacheHelper _cacheHelper;
+        readonly ICacheHelper _cacheHelper;
 
         public DependencyResolver(ICacheHelper cacheHelper)
         {

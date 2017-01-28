@@ -7,9 +7,9 @@ namespace DynamicBundles
 {
     public class DynamicBundlesBuilder
     {
-	    readonly IDynamicBundleCollection _bundles;
-	    readonly ICacheHelper _cacheHelper;
-	    readonly BundleFactories _bundleFactories;
+        readonly IDynamicBundleCollection _bundles;
+        readonly ICacheHelper _cacheHelper;
+        readonly BundleFactories _bundleFactories;
 
         /// <param name="bundles">
         /// The bundle collection that the bundles will be added to.
