@@ -79,7 +79,7 @@ namespace DynamicBundles
         private void AddRequiredFilesSingleDirectory(FileListsByAssetType fileListsByAssetType, AssetPath dirPath)
         {
             string absolutePath = dirPath.AbsolutePath;
-            IEnumerable<string> filePaths = Directory.EnumerateFiles(absolutePath);
+            string[] filePaths = Directory.EnumerateFiles(absolutePath).ToArray();
 
             // Need to first process the nuspec files, and then the asset files.
             // This because the asset files may depend on the files pointed at by the nuspec files.
