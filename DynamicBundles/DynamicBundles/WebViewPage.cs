@@ -22,14 +22,14 @@ namespace DynamicBundles
             base.ExecutePageHierarchy();
         }
 
-        public static IHtmlString DynamicBundlesTopRender()
+        public static IHtmlString DynamicBundlesTopRender(string tagFormat = null)
         {
-            return WebViewPageStatic.DynamicBundlesTopRender();
+            return WebViewPageStatic.DynamicBundlesTopRender(tagFormat);
         }
 
-        public static IHtmlString DynamicBundlesBottomRender()
+        public static IHtmlString DynamicBundlesBottomRender(string tagFormat = null)
         {
-            return WebViewPageStatic.DynamicBundlesBottomRender();
+            return WebViewPageStatic.DynamicBundlesBottomRender(tagFormat);
         }
     }
 
@@ -47,14 +47,14 @@ namespace DynamicBundles
             base.ExecutePageHierarchy();
         }
 
-        public static IHtmlString DynamicBundlesTopRender()
+        public static IHtmlString DynamicBundlesTopRender(string tagFormat = null)
         {
-            return WebViewPageStatic.DynamicBundlesTopRender();
+            return WebViewPageStatic.DynamicBundlesTopRender(tagFormat);
         }
 
-        public static IHtmlString DynamicBundlesBottomRender()
+        public static IHtmlString DynamicBundlesBottomRender(string tagFormat = null)
         {
-            return WebViewPageStatic.DynamicBundlesBottomRender();
+            return WebViewPageStatic.DynamicBundlesBottomRender(tagFormat);
         }
     }
 
@@ -102,7 +102,7 @@ namespace DynamicBundles
         /// That is, when this runs, the time for gathering file dependencies is over and you need to
         /// process them into bundles.
         /// </remarks>
-        public static IHtmlString DynamicBundlesTopRender()
+        public static IHtmlString DynamicBundlesTopRender(string tagFormat = null)
         {
             if (!HttpContextStore.FirstTime()) { return new HtmlString(""); }
 
@@ -115,7 +115,8 @@ namespace DynamicBundles
             HttpContextStore.StoreBottomBundleNames(scriptBundleVirtualPaths);
 
             // Note that Styles.Render assumes that all the bundles are StyleBundles
-            return Styles.Render(styleBundleVirtualPaths.ToArray());
+            var paths = styleBundleVirtualPaths.ToArray();
+            return tagFormat != null ? Styles.RenderFormat(tagFormat, paths) : Styles.Render(paths);
         }
 
         /// <summary>
@@ -123,10 +124,11 @@ namespace DynamicBundles
         /// (would render script bundles).
         /// </summary>
         /// <returns></returns>
-        public static IHtmlString DynamicBundlesBottomRender()
+        public static IHtmlString DynamicBundlesBottomRender(string tagFormat = null)
         {
             // Note that this assumes that all the bundles are ScriptBundles
-            return Scripts.Render(HttpContextStore.GetBottomBundleNames().ToArray());
+            var paths = HttpContextStore.GetBottomBundleNames().ToArray();
+            return tagFormat != null ? Scripts.RenderFormat(tagFormat, paths) : Scripts.Render(paths);
         }
     }
 }
