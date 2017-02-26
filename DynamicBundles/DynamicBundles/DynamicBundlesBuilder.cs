@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using DynamicBundles.Models;
 using System.Web.Optimization;
 
@@ -63,6 +65,26 @@ namespace DynamicBundles
         private List<string> CreateBundles(FileListsByAssetType fileListsByAssetType, AssetType assetType, Func<string, string[], Bundle> bundleFactory)
         {
             List<AssetPath> files = fileListsByAssetType.GetList(assetType);
+
+            // ignore minified file if non-minified file is found
+            for (var i = files.Count - 1; i >= 0; i--)
+            {
+                var file = files[i];
+                var directoryName = Path.GetDirectoryName(file.AbsolutePath);
+                var fileNameWithoutExtension = Path.GetFileNameWithoutExtension(file.AbsolutePath);
+
+                if (directoryName != null && fileNameWithoutExtension.EndsWith(".min"))
+                {
+                    var extension = Path.GetExtension(file.AbsolutePath);
+                    var nonMinifiedFileName = fileNameWithoutExtension.Substring(0, fileNameWithoutExtension.Length - 4) + extension;
+                    var nonMinifiedAbsolutePath = Path.Combine(directoryName, nonMinifiedFileName);
+                    if (files.Any(ap => ap.AbsolutePath == nonMinifiedAbsolutePath))
+                    {
+                        files.RemoveAt(i);
+                    }
+                }
+            }
+
             List<List<AssetPath>> filesByAreaController = RouteHelper.FilePathsSortedByRoute(files);
             List<string> bundleVirtualPaths = BundleHelper.AddFileListsAsBundles(_bundles, filesByAreaController, bundleFactory);
             return bundleVirtualPaths;
