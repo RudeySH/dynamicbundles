@@ -12,9 +12,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("DynamicBundles - Dynamic MVC Bundles")]
 [assembly: AssemblyDescription("Co-locate HTML, CSS, JavaScript and image files that make up a page or component for easier reuse and maintainability. Auto generate your MVC bundles to ensure the right files are loaded in the right order.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Matt Perdeck")]
+[assembly: AssemblyCompany("RudeySH")]
 [assembly: AssemblyProduct("DynamicBundles")]
-[assembly: AssemblyCopyright("Copyright ?  2014")]
+[assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

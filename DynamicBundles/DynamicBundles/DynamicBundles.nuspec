@@ -6,15 +6,14 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <projectUrl>http://getdynamicbundles.com/</projectUrl>
+    <licenseUrl>https://raw.githubusercontent.com/RudeySH/dynamicbundles/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/RudeySH/dynamicbundles</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
-    <copyright>Copyright 2014</copyright>
-    <tags>MVC Bundles CSS JavaScript images HTML</tags>
-      <dependencies>
-      </dependencies>
+    <copyright>Copyright 2018</copyright>
+    <tags>MVC Bundles CSS JavaScript images HTML Rudey RudeySH</tags>
   </metadata>
-    <files>
-        <file src="NuGet\readme.txt" target="" />
-    </files>
+  <files>
+    <file src="NuGet\readme.txt" target="" />
+  </files>
 </package>
