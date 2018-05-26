@@ -3,6 +3,10 @@ dynamicbundles
 
 Dependency resolver for MVC web sites, using MVC bundles
 
+http://getdynamicbundles.com/
+
+https://www.nuget.org/packages/RudeySH.DynamicBundles
+
 This fork fixes:
 
 - [#2 Name the asset as a bundle for caching purposes](https://github.com/mperdeck/dynamicbundles/pull/2)
